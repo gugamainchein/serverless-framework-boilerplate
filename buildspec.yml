@@ -6,19 +6,13 @@ phases:
   pre_build:
     commands:
       - echo Stack started...
-      - echo "FINOPS_STAGE=${FINOPS_STAGE}" >> .env.production
       - echo "STAGE=${STAGE}" >> .env.production
       - echo "LOCAL_PORT=${LOCAL_PORT}" >> .env.production
-      - echo "AWS_API_GATEWAY_COGNITO_NAME=${AWS_API_GATEWAY_COGNITO_NAME}" >> .env.production
       - echo "LAYER_BUCKET=${LAYER_BUCKET}" >> .env.production
       - echo "AWS_API_GATEWAY_REST_ID=${AWS_API_GATEWAY_REST_ID}" >> .env.production
       - echo "AWS_API_GATEWAY_REST_ROOT_RESOURCE_ID=${AWS_API_GATEWAY_REST_ROOT_RESOURCE_ID}" >> .env.production
       - echo "AWS_REGION_LOCATION=${AWS_REGION_LOCATION}" >> .env.production
       - echo "API_NAME=${API_NAME}" >> .env.production
-      - echo "ACCOUNT_ID=${ACCOUNT_ID}" >> .env.production
-      - echo "USER_POOL_ID=${USER_POOL_ID}" >> .env.production
-      - echo "AWS_SECRET_VALUE_ACCOUNTS=${AWS_SECRET_VALUE_ACCOUNTS}" >> .env.production
-      - echo "AWS_SECRET_GOOGLE_AUTH_TOKEN=${AWS_SECRET_GOOGLE_AUTH_TOKEN}" >> .env.production
       - cat .env.production
   build:
     on-failure: ABORT
