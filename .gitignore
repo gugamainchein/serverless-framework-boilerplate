@@ -1,0 +1,9 @@
+node_modules
+jspm_packages
+.serverless
+.webpack
+jwt.example.json
+package-lock.json
+.env.production
+.env.development
+yarn.lock

@@ -1,0 +1,10 @@
+hello-world:
+  handler: src/functions/hello/world.handler
+  name: ${self:custom.dotenv.API_NAME}-hello-world
+  description: Função para imprimir o hello world
+  memorySize: 128
+  events:
+    - http:
+        path: /hello/world
+        method: get
+        cors: true
